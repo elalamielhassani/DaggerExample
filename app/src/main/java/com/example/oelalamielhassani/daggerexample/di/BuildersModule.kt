@@ -4,7 +4,8 @@ import com.example.oelalamielhassani.daggerexample.lobby.LobbyActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import com.example.oelalamielhassani.daggerexample.lobby.LobbyActivityModule
-
+import com.example.oelalamielhassani.daggerexample.lobby.LobbyFragment
+import com.example.oelalamielhassani.daggerexample.lobby.LobbyFragmentModule
 
 
 /**
@@ -13,5 +14,8 @@ import com.example.oelalamielhassani.daggerexample.lobby.LobbyActivityModule
 @Module
 abstract class BuildersModule {
     @ContributesAndroidInjector(modules = [LobbyActivityModule::class])
-    abstract fun bindLoobyActivity() : LobbyActivity
+    abstract fun bindLobbyActivity() : LobbyActivity
+
+    @ContributesAndroidInjector(modules = [LobbyFragmentModule::class])
+    abstract fun bindLobbyFragment() : LobbyFragment
 }
