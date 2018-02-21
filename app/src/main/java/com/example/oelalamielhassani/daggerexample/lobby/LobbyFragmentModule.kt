@@ -9,5 +9,5 @@ import dagger.Provides
 @Module
 class LobbyFragmentModule{
     @Provides
-    fun provideLobbyFragmentHelloService() : LobbyFragmentHelloService = LobbyFragmentHelloService()
+    fun provideLobbyFragmentHelloService(testInjectedClass: TestInjectedClass) : LobbyFragmentHelloService = LobbyFragmentHelloService(testInjectedClass)
 }

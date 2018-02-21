@@ -3,6 +3,7 @@ package com.example.oelalamielhassani.daggerexample.di
 import android.content.Context
 import com.example.oelalamielhassani.daggerexample.App
 import com.example.oelalamielhassani.daggerexample.common.CommonHelloService
+import com.example.oelalamielhassani.daggerexample.lobby.TestDeux
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -19,5 +20,9 @@ class AppModule {
     @Singleton
     @Provides
     fun provideCommonHelloService() : CommonHelloService = CommonHelloService()
+
+    @Singleton
+    @Provides
+    fun provideTestDeux() : TestDeux = TestDeux()
 
 }

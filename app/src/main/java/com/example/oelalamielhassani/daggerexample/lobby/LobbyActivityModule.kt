@@ -9,6 +9,9 @@ import dagger.Provides
 @Module
 class LobbyActivityModule {
     @Provides
-    fun provideLobbyHelloService() : LobbyHelloService = LobbyHelloService()
-
+    fun provideLobbyHelloService(classTrois: ClassTrois) : LobbyHelloService = LobbyHelloService(classTrois)
+    @Provides
+    fun providesClassTrois(classQuatre : ClassQuatre) : ClassTrois = ClassTrois(classQuatre)
+    @Provides
+    fun providesClassQuatre() : ClassQuatre = ClassQuatre()
 }
